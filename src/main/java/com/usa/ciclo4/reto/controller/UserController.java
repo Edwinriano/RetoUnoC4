@@ -32,7 +32,7 @@ public class UserController {
         return userService.emailExists(email);
     }
 
-    @GetMapping("/{email},{password}")
+    @GetMapping("/{email}/{password}")
     public Optional<User> userExists(@PathVariable("email") String email, @PathVariable("password") String password){
         return userService.userExists(email,password);
     }
